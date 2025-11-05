@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<mavlink>
+    <include>../message_definitions/v1.0/common.xml</include>
+    
+    <messages>
+        <message id="202" name="DATA_BLOCK">
+            <description>Custom data message with an ID and value.</description>
+            <field type="uint16_t" name="id">Message ID of this data block</field>
+            <field type="float" name="value">The actual value</field>
+        </message>
+    </messages>
+</mavlink>
