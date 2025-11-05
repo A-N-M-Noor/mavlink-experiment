@@ -40,4 +40,4 @@ The current code works like this:
 2. The MCU receives the packet and sends back a value with the same id and a value of count+1.
 3. Python script reveives the packet and calculates the latency.
 
-The typical latency is around 1 to 2 milliseconds which is pretty impressive.
+The typical latency is under 1 millisecond which is pretty impressive.

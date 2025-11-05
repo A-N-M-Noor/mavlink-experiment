@@ -34,7 +34,7 @@ def receive_heartbeat(msg):
 def receive(msg, msg_type):
     if(msg_type == "DATA_BLOCK"):
         print(f"Recv DATA_BLOCK: id={msg.id}, value={msg.value}")
-        print(f"<< Latency: {(time.time() - sentTime)*1000:.2f} ms")
+        print(f"<< Latency: {(time.time() - sentTime)*500:.2f} ms")
 
 if __name__ == "__main__":
     try:
