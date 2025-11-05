@@ -7,7 +7,10 @@ Here, I tried to create my own custom message type and use it to send and receiv
 
 ## Usage
 Step 1:
-Clone this repo
+Clone this repo:
+```
+git clone https://github.com/A-N-M-Noor/mavlink-experiment.git
+```
 
 Step 2:
 Install necessary packages:
@@ -16,7 +19,25 @@ pip3 install -r requirements.txt
 ```
 
 Step 3:
-Upload the arduino code from `/Arduino_Side/Arduino_Side.ino`
+Upload the arduino code from
+```
+/Arduino_Side/Arduino_Side.ino
+```
 
 Step 4:
-Run the python file from `/Python_Side/Test_1.py`
+Run the python file from 
+```
+/Python_Side/Test_1.py
+```
+
+## Result
+
+I was successful in establishing a mavlink connection between the esp32 and python script. The custom message - DATA_BLOCK, has two fields: id and value.
+
+The current code works like this:
+
+1. The python script sends a DATA_BLOCK with id 42 and a count value.
+2. The MCU receives the packet and sends back a value with the same id and a value of count+1.
+3. Python script reveives the packet and calculates the latency.
+
+The typical latency is around 1 to 2 milliseconds which is pretty impressive.
