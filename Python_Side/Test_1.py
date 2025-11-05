@@ -7,7 +7,6 @@ sys.path.insert(0, os.path.join(GEN_DIR, 'python'))
 
 from MAVLinkConnection.MAVLink import MAVLinkConnection
 
-# Configuration
 SERIAL_PORT = '/dev/ttyACM0'
 BAUD_RATE = 57600
 SYSTEM_ID = 1
